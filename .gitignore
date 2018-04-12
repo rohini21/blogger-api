@@ -1,0 +1,7 @@
+node_modules
+naught.log
+naught.pid
+stderr.log
+stdout.log
+naught.ipc
+

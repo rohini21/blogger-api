@@ -1,0 +1,30 @@
+{
+  "name": "blogger-api",
+  "version": "1.0.0",
+  "description": "blogger, blogger-api, blogging",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "./node_modules/.bin/naught deploy ${NODE_IPC:-naught.ipc}",
+    "status": "./node_modules/.bin/naught status",
+    "start": "./node_modules/.bin/naught start --worker-count ${NODE_WORKERS:-1} --ipc-file ${NODE_IPC:-naught.ipc} --log ${NODE_NAUGHT_LOG:-naught.log} --stdout ${NODE_STDOUT_LOG:-stdout.log} --stderr ${NODE_STDERR_LOG:-stderr.log} --max-log-size ${NODE_MAX_LOG_SIZE:-10485760} app.js",
+    "stop": "./node_modules/.bin/naught stop --timeout 1 ${NODE_IPC:-naught.ipc}",
+    "restart": "npm run stop; npm run start"
+  },
+  "author": "Rohini Joshi",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.2",
+    "config": "^1.30.0",
+    "connect-flash": "~0.1.1",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.16.2",
+    "express-session": "^1.15.6",
+    "mongoose": "^5.0.8",
+    "naught": "^1.6.0",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "when": "^3.7.8"
+  }
+}
